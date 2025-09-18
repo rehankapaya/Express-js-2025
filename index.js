@@ -17,19 +17,24 @@ const app = express()
 let users = [
     {
         id:1,
-        name:"Tahir"
+        name:"Tahir",
+        age:22,
+        contact:"03128883838"
     },
     {
         id:2,
-        name:"Ali"
+        name:"Ali",
+        age:21
     },
     {
         id:3,
-        name:"Kamran"
+        name:"Kamran",
+        age:21
     },
     {
         id:4,
-        name:"Raza"
+        name:"Raza",
+        age:22
     },
 ]
 
