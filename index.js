@@ -1,8 +1,10 @@
 const express = require('express')
+const ConnectDB = require('./config/db')
 const app = express()
+require('dotenv').config()
 
 
-
+ConnectDB()
 // HTTPS METHODS
 
 // 1 GET - WILL USE TO GET DATA - app.get()
@@ -50,6 +52,7 @@ app.get('/api/users',(req,res)=>{
     res.send(users)
 })
 
-app.listen(3000,()=>{
-    console.log(`server is running`)
+let PORT = process.env.PORT || 5000
+app.listen(PORT,()=>{
+    console.log(`server is running on port ${PORT}`)
 })
